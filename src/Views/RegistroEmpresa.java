@@ -1,5 +1,5 @@
 
-package Vistas;
+package Views;
 
 import Controllers.PersonaJuridicaController;
 import Controllers.RolController;

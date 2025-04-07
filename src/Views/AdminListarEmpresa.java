@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vistas;
+package Views;
 
 /**
  *
  * @author Administrador
  */
-public class AdminListarCliente extends javax.swing.JFrame {
+public class AdminListarEmpresa extends javax.swing.JFrame {
 
     /**
      * Creates new form RegistroCliente
      */
-    public AdminListarCliente() {
+    public AdminListarEmpresa() {
         initComponents();
     }
 
@@ -477,7 +477,6 @@ public class AdminListarCliente extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(51, 153, 255));
-        setPreferredSize(new java.awt.Dimension(800, 800));
 
         jPanel1.setBackground(new java.awt.Color(51, 153, 255));
         jPanel1.setAutoscrolls(true);
@@ -511,7 +510,7 @@ public class AdminListarCliente extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Lucida Sans Unicode", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setText(" Listar Cliente");
+        jLabel13.setText(" Listar Empresa");
         jLabel13.setToolTipText("");
 
         jLabel2.setBackground(new java.awt.Color(153, 153, 153));
@@ -523,10 +522,10 @@ public class AdminListarCliente extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Tipo de Identificación ", "Número  Identificación ", "Nombres", "Apellidos", "Fecha de Nacimiento ", "Género", "Correo", "Teléfono", "Sector Interés ", "Usuario", "Contraseña"
+                "id", "tipo de identificación ", "digito de verificación ", "razon social", "email", "numero telefono", "sector", "usuario", "contraseña"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -710,7 +709,7 @@ public class AdminListarCliente extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new AdminListarCliente().setVisible(true);
+                new AdminListarEmpresa().setVisible(true);
             }
         });
     }
