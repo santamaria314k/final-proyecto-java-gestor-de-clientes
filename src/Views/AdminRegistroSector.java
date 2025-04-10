@@ -76,6 +76,7 @@ public class AdminRegistroSector extends javax.swing.JFrame {
         jScrollBar1 = new javax.swing.JScrollBar();
         jTextField1 = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         jComboBox1.setBackground(new java.awt.Color(51, 153, 255));
         jComboBox1.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
@@ -543,6 +544,14 @@ public class AdminRegistroSector extends javax.swing.JFrame {
         jLabel2.setText("ADMINISTRADOR");
         jLabel2.setToolTipText("");
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setText("<-volver");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -552,7 +561,9 @@ public class AdminRegistroSector extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(174, 174, 174)
+                                .addGap(23, 23, 23)
+                                .addComponent(jButton5)
+                                .addGap(76, 76, 76)
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(382, 382, 382)
@@ -580,7 +591,9 @@ public class AdminRegistroSector extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jLabel2)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jButton5))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
                 .addGap(17, 17, 17)
@@ -616,7 +629,7 @@ public class AdminRegistroSector extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 555, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 555, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -691,6 +704,12 @@ public class AdminRegistroSector extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        InicioSesion inise =new InicioSesion();
+        inise.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -732,6 +751,7 @@ public class AdminRegistroSector extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;

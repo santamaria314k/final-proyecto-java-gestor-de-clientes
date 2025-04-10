@@ -32,6 +32,7 @@ public class RegistroPublicacion extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtpublicacion = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +59,14 @@ public class RegistroPublicacion extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setText("<-volver");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -75,13 +84,18 @@ public class RegistroPublicacion extends javax.swing.JFrame {
                                 .addComponent(jLabel7))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(59, 59, 59)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jButton3)))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(11, 11, 11)
+                .addComponent(jButton3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1)
                 .addGap(28, 28, 28)
                 .addComponent(jLabel7)
@@ -131,12 +145,18 @@ public class RegistroPublicacion extends javax.swing.JFrame {
         publicacionService.RegistrarPublicacion(nuevoPublicacion);
 
         // Mostrar mensaje de éxito
-        JOptionPane.showMessageDialog(this, "publicasion registrada  con éxito!");
+        JOptionPane.showMessageDialog(this, "publicación registrada  con éxito!");
 
         // Limpiar el campo de texto
         txtpublicacion.setText("");
 
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ClienteMenu inise =new ClienteMenu();
+        inise.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,6 +178,7 @@ public class RegistroPublicacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel7;

@@ -104,6 +104,7 @@ public class AdminRegistroCliente extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jScrollBar1 = new javax.swing.JScrollBar();
         jLabel14 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
 
         jComboBox1.setBackground(new java.awt.Color(51, 153, 255));
         jComboBox1.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
@@ -730,6 +731,14 @@ public class AdminRegistroCliente extends javax.swing.JFrame {
         jLabel14.setText(" Registrar Cliente");
         jLabel14.setToolTipText("");
 
+        jButton5.setBackground(new java.awt.Color(204, 204, 204));
+        jButton5.setText("<-volver");
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -793,7 +802,9 @@ public class AdminRegistroCliente extends javax.swing.JFrame {
                                     .addComponent(jSeparator22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jComboBox4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
+                        .addGap(16, 16, 16)
+                        .addComponent(jButton5)
+                        .addGap(37, 37, 37)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -813,8 +824,13 @@ public class AdminRegistroCliente extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel1))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton5)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel14)
                 .addGap(32, 32, 32)
@@ -1013,6 +1029,12 @@ public class AdminRegistroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+        InicioSesion inise =new InicioSesion();
+        inise.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton5ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1055,6 +1077,7 @@ public class AdminRegistroCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;

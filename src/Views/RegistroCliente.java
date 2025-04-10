@@ -141,6 +141,7 @@ public class RegistroCliente extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         campoSectores = new javax.swing.JList<>();
         campoPassword = new javax.swing.JPasswordField();
+        jButton4 = new javax.swing.JButton();
 
         jComboBox1.setBackground(new java.awt.Color(51, 153, 255));
         jComboBox1.setFont(new java.awt.Font("Lucida Sans", 1, 12)); // NOI18N
@@ -733,6 +734,14 @@ public class RegistroCliente extends javax.swing.JFrame {
 
         campoPassword.setText("jPasswordField1");
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setText("<-volver");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jframeLayout = new javax.swing.GroupLayout(jframe);
         jframe.setLayout(jframeLayout);
         jframeLayout.setHorizontalGroup(
@@ -783,7 +792,9 @@ public class RegistroCliente extends javax.swing.JFrame {
                                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                                 .addComponent(campoTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE))))))))
                     .addGroup(jframeLayout.createSequentialGroup()
-                        .addGap(148, 148, 148)
+                        .addContainerGap()
+                        .addComponent(jButton4)
+                        .addGap(67, 67, 67)
                         .addComponent(jLabel1))
                     .addGroup(jframeLayout.createSequentialGroup()
                         .addGap(425, 425, 425)
@@ -807,7 +818,9 @@ public class RegistroCliente extends javax.swing.JFrame {
             jframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jframeLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton4))
                 .addGap(18, 18, 18)
                 .addGroup(jframeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jframeLayout.createSequentialGroup()
@@ -982,7 +995,7 @@ public class RegistroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_GuardarClienteActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void campoTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoTelefonoActionPerformed
@@ -1016,6 +1029,12 @@ public class RegistroCliente extends javax.swing.JFrame {
     private void campoIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_campoIDActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_campoIDActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        InicioSesion inise =new InicioSesion();
+        inise.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1070,6 +1089,7 @@ public class RegistroCliente extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;

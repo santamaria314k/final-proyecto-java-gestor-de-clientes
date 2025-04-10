@@ -36,6 +36,7 @@ public class Registro extends javax.swing.JFrame {
         jComboBox1 = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel46 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
 
         jLabel33.setBackground(new java.awt.Color(255, 255, 255));
         jLabel33.setFont(new java.awt.Font("Lucida Sans", 1, 24)); // NOI18N
@@ -86,6 +87,14 @@ public class Registro extends javax.swing.JFrame {
         jLabel46.setForeground(new java.awt.Color(255, 255, 255));
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Images/userInicio.png"))); // NOI18N
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setText("<-volver");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -109,13 +118,18 @@ public class Registro extends javax.swing.JFrame {
                             .addComponent(jLabel2)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(172, 172, 172)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jButton4)))
                 .addContainerGap(135, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
+                .addContainerGap()
+                .addComponent(jButton4)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel34)
                 .addGap(27, 27, 27)
                 .addComponent(jLabel46)
@@ -146,11 +160,22 @@ public class Registro extends javax.swing.JFrame {
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
+        
+        
+        
+        
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        InicioSesion inise =new InicioSesion();
+        inise.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,6 +214,7 @@ public class Registro extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel33;

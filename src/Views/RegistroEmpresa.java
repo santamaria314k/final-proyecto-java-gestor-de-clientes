@@ -2,7 +2,6 @@
 package Views;
 
 import Controllers.PersonaJuridicaController;
-import Controllers.RolController;
 import Controllers.SectorController;
 import Controllers.UsuarioController;
 import Models.PersonaJuridica;
@@ -105,6 +104,7 @@ public class RegistroEmpresa extends javax.swing.JFrame {
         jLabel15 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         campoDescripcion = new javax.swing.JTextArea();
+        jButton4 = new javax.swing.JButton();
 
         jLabel2.setFont(new java.awt.Font("Lucida Sans Unicode", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -369,6 +369,14 @@ public class RegistroEmpresa extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(campoDescripcion);
 
+        jButton4.setBackground(new java.awt.Color(204, 204, 204));
+        jButton4.setText("<-volver");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -452,7 +460,9 @@ public class RegistroEmpresa extends javax.swing.JFrame {
                                                 .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addGap(119, 119, 119))
                     .addGroup(jPanel1Layout.createSequentialGroup()
@@ -468,7 +478,9 @@ public class RegistroEmpresa extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
@@ -665,6 +677,12 @@ public class RegistroEmpresa extends javax.swing.JFrame {
             campoDescripcion.requestFocus();
         }
     }//GEN-LAST:event_campoDescripcionFocusLost
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        InicioSesion inise =new InicioSesion();
+        inise.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton4ActionPerformed
     
     /**
      * @param args the command line arguments
@@ -715,6 +733,7 @@ public class RegistroEmpresa extends javax.swing.JFrame {
     private javax.swing.JTextField campoTelefono;
     private javax.swing.JTextField campoUsername;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;

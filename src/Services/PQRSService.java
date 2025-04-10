@@ -99,7 +99,7 @@ public List<PQRS> obtenerListaPQRS() {
         conn.setAutoCommit(false); // Desactivamos autocommit
         
         // 1. Actualizar tabla pqrs
-        String sqlPQRS = "UPDATE pqrs SET tipoComentario = ? WHERE idpqrs = ?";
+        String sqlPQRS = "UPDATE pqrs_asignacion SET comentario = ? WHERE idpqrs = ?";
         try (PreparedStatement pstmtPQRS = conn.prepareStatement(sqlPQRS)) {
             pstmtPQRS.setString(1, nuevoTipoComentario);
             pstmtPQRS.setInt(2, idPQRS);
